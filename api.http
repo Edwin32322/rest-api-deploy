@@ -1,0 +1,31 @@
+###Recuperar todas las peliculas
+GET http://localhost:1234/movies
+###Recuperar las peliculas por id
+GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+###Recuperar las pelis por genero
+GET http://localhost:1234/movies?genre=romance
+
+###METHOD POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Space Jam",
+    "year": 1989,
+    "duration": 2,
+    "director": "Warner Bros",
+    "poster": "https://www.bing.com/ck/a?!&&p=5ecb99e94c9a49eeJmltdHM9MTcwODY0NjQwMCZpZ3VpZD0zYzI2MGYwNy0zOGI4LTYyODctMzkxNS0xYjJiMzkxNzYzZmQmaW5zaWQ9NTY2Ng&ptn=3&ver=2&hsh=3&fclid=3c260f07-38b8-6287-3915-1b2b391763fd&u=a1L2ltYWdlcy9zZWFyY2g_cT1zcGFjZSUyMGphbSUyMHBvc3RlciZGT1JNPUlRRlJCQSZpZD04RTQyMzJBMDY0N0NGQ0NERDhERjgyMDdDNEVDQjRGNjdBQTAyRDVC&ntb=1",
+    "genre": ["Adventure", "Fantasy"]
+}
+
+###Method PATCH
+PATCH  http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year" : 1999
+}
+
+###
+DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
